@@ -6,15 +6,11 @@ import { MaterialModule } from './material.module';
 import { CoreModule } from './SignIn-SignUp/core/core.module';
 import {AngularFireModule} from '@angular/fire';
 import { environment } from 'src/environments/environment';
-
-import { ForumComponent } from './forum/forum.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    
-    ForumComponent
   ],
   imports: [
     BrowserModule,
