@@ -1,0 +1,24 @@
+
+<main>
+        <section>
+            <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+                    <img class="displayed" src="/assets/logo.png" height=100px>
+               <span><h3 class="text">Welcome Ideabrain</h3></span>
+                <p>Create a new account</p>
+                <mat-form-field [formGroup]="signUpForm" >
+                    <input matInput placeholder="Enter your email" [formControl]="email" required>
+                    <mat-error *ngIf="email.valid">Not a valid email</mat-error>
+                </mat-form-field>
+      
+                <mat-form-field [formGroup]="signUpForm" >
+                    <input matInput placeholder="Enter your password" [formControl]="password" [type]="hide ? 'password':'text'" required>
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    <mat-error *ngIf="password.valid">Not a valid password</mat-error>
+                    <mat-hint align="end">
+                            <a routerLink='/reset-password'>Forgot your password?</a>
+                        </mat-hint>
+                </mat-form-field>
+                <button mat-raised-button type="submit">Sign In</button>
+            </form>
+        </section>
+    </main>

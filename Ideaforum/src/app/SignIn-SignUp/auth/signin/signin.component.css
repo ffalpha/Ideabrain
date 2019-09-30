@@ -1,0 +1,46 @@
+main{
+    display:float;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10%;
+    
+}
+section{
+   
+    max-width: 500px;
+    margin:auto;
+    border-style: solid;
+    border-color:fuchsia;
+    
+}
+mat-form-field{
+    width:100%
+    
+}
+
+button{
+    width:100%;
+    align-items: center;
+   background-color: #009933;
+   margin-top: 15px;
+   margin-bottom: 30px;
+    
+}
+.text{
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+    
