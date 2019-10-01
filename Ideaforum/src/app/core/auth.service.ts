@@ -118,7 +118,7 @@ export class AuthService {
         );
         const data: User = {
           uid: user.uid,
-          email: user.email || null,
+          email: user.email,
           userrole:"User",
           NIC:"13142124",
           displayName: user.displayName,
