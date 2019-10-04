@@ -32,7 +32,7 @@ export class AuthService {
     //Chekcing if there is a user.If so return a firestore user doccument
     this.user =this.afAuth.authState.switchMap(user=>{
       if(user){
-        return this.afs.doc<User>('user/${user.id}').valueChanges();
+        return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
 
       }else{
         return Observable.of(null)
@@ -81,7 +81,8 @@ export class AuthService {
    signOut(){
      return this.afAuth.auth.signOut().then
      (()=>{
-       this.router.navigate(['/'])
+       console.log("Hari");
+       this.router.navigate(['/me'])
      })
    }
   
@@ -107,6 +108,7 @@ export class AuthService {
       .signInWithPopup(provider)
       .then(credential => {
         this.createCollection(credential.user);
+      
       })
       .catch(error => console.log(error.message));
   }

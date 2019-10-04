@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { User } from '../user.model';
+import { AuthService } from 'src/app/core/auth.service';
 
 @Component({
   selector: 'app-user-list-item',
@@ -9,9 +10,10 @@ import { User } from '../user.model';
 export class UserListItemComponent implements OnInit {
   //geting from parent
   @Input() user:User
-  constructor() { }
+  constructor(private fire:AuthService) { }
 
   ngOnInit() {
   }
-
+  
+ 
 }
