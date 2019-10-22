@@ -25,10 +25,10 @@ getIn(id:string){
   return this.userDoc.valueChanges();
 }
 //updateing user profile
-updateProfiledata(displayName:string,photoURL:string){
+updateProfiledata(displayName:string,photoUrl:string){
   const user=this.auth.authState //getting current user
-  const data={displayName,photoURL}
-  return user.updateProfile(data).then(()=>this.afs.doc(`users/${user.uid}`).update({displayName,photoURL})).
+  const data={displayName,photoUrl}
+  return user.updateProfile(data).then(()=>this.afs.doc(`users/${user.uid}`).update({displayName,photoUrl})).
   then(()=>console.log("Your profile has been updated")).
   catch(error=>console.log(error.message))//this coming from firebases sdk
 }
