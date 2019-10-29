@@ -37,7 +37,7 @@ export class UserDashboradComponent implements OnInit {
   }
   
   async uploadPhotoURL (event) {
-    console.log("I am here");
+   
     const file = event.target.files[0];
     const path = `users/${this.user.uid}/photos/${file.name}`;
     if (file.type.split('/')[0] !== 'image') {
@@ -51,8 +51,6 @@ export class UserDashboradComponent implements OnInit {
       this.downloadURL=await ref.getDownloadURL().toPromise();
       this.userService.updateProfiledata(this.user.displayName, this.downloadURL);
       console.log("Kalana");
-        
-      
     } 
   }
 
